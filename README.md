@@ -7,6 +7,7 @@ Group Chat style Community backend
 - 정렬, 기간 기능 강화
 - 퍼오기 기능 업그레이드
 - 댓글라시코 
+- 모바일에 맞게 실시간성, 알람을 가장 신경씀
 
 ### DB tables
 
@@ -30,6 +31,10 @@ Board  crud
 Comment crud
 Gtag crud
 
+### utils
+Notification
+Cache
+Mqtt
 
 
 
