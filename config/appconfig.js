@@ -16,15 +16,15 @@ dbconfig.port = 5306
 config.dbconfig = dbconfig
 config.redis = redis
 
-var mongodb = {};
-mongodb.host = "45.77.22.61"
-mongodb.id = "fishwang_log_manager"
-mongodb.pw = "fffiiissshhh#1416"
-mongodb.dbname = "fishwang_db"
-mongodb.port = 4788
-// Connection URL
-mongodb.url = `mongodb://${mongodb.id}:${mongodb.pw}@${mongodb.host}:${mongodb.port}/${mongodb.dbname}`
-config.mongodb = mongodb;
+// var mongodb = {};
+// mongodb.host = "45.77.22.61"
+// mongodb.id = "fishwang_log_manager"
+// mongodb.pw = "fffiiissshhh#1416"
+// mongodb.dbname = "fishwang_db"
+// mongodb.port = 4788
+// // Connection URL
+// mongodb.url = `mongodb://${mongodb.id}:${mongodb.pw}@${mongodb.host}:${mongodb.port}/${mongodb.dbname}`
+// config.mongodb = mongodb;
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
 

@@ -1,5 +1,5 @@
-const dbservice = require('../../services/dbservice')
-const authservice = require('../../services/authservice')
+const dbservice = require('../../services/db.service')
+const authservice = require('../../services/auth.service')
 const path = require('path');
 const validation = require('../../lib/validation-errors')
 

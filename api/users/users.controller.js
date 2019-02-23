@@ -1,4 +1,4 @@
-const dbservice = require('../../services/dbservice')
+const dbservice = require('../../services/db.service')
 const path = require('path');
 
 exports.list = async (ctx) => {

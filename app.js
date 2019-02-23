@@ -5,13 +5,9 @@ const Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
 
-const MongoClient = require('mongodb').MongoClient;
+// const MongoClient = require('mongodb').MongoClient;
 const users = require('./api/users')
 const apps = require('./api/apps')
-const schedules = require('./api/schedules')
-const reservations = require('./api/reservations')
-const boats = require('./api/boats')
-const test = require('./api/test')
 const auth = require('./api/auth')
 
 const Log = require('./lib/log')
@@ -70,31 +66,28 @@ app.use(router.routes()).use(router.allowedMethods());
 
 router.use('/api/usres', users.routes())
 router.use('/api/apps', apps.routes())
-router.use('/api/schedules', schedules.routes())
-router.use('/api/reservations', reservations.routes())
-router.use('/api/boats', boats.routes())
-router.use('/api/test', test.routes())
+
 router.use('/api/auth', auth.routes())
 
 
 // MongoDB connection pool (set up on app initialisation) - mongo has no synchronous connect, so emit
 // 'mongodbReady' when connected (note mongodbReady lister has to be set before event is emitted)
-MongoClient.connect(appconfig.mongodb.url, { useNewUrlParser: true })
-    .then(client => {
-        global.mongoDb = client.db(client.s.options.dbName);
-        // if empty db, create capped collections for logs (if not createCollection() calls do nothing)
-        global.mongoDb.createCollection('log-access', { capped: true, size: 100*1e3, max: 100 });
-        global.mongoDb.createCollection('log-error',  { capped: true, size: 100*4e3, max: 100 });
-    })
-    .then(() => {
-        app.emit('mongodbReady');
-    })
-    .catch(err => {
-        console.error(`Mongo connection error: ${err.message}`);
-        process.exit(1);
-    });
+// MongoClient.connect(appconfig.mongodb.url, { useNewUrlParser: true })
+//     .then(client => {
+//         global.mongoDb = client.db(client.s.options.dbName);
+//         // if empty db, create capped collections for logs (if not createCollection() calls do nothing)
+//         global.mongoDb.createCollection('log-access', { capped: true, size: 100*1e3, max: 100 });
+//         global.mongoDb.createCollection('log-error',  { capped: true, size: 100*4e3, max: 100 });
+//     })
+//     .then(() => {
+//         app.emit('mongodbReady');
+//     })
+//     .catch(err => {
+//         console.error(`Mongo connection error: ${err.message}`);
+//         process.exit(1);
+//     });
 
 
-app.listen(12111, () => {
-    console.log('PatchAid Apiserver on port : 12111');
+app.listen(12113, () => {
+    console.log('PatchAid Apiserver on port : 12113');
 });

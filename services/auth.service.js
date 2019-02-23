@@ -3,7 +3,7 @@ const JWTStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
 
 const KakaoStrategy = require('passport-kakao').Strategy
-const dbservice = require('./dbservice');
+const dbservice = require('./db.service');
 const jwt = require('jsonwebtoken');
 
 const validation = require('../lib/validation-errors')
