@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/yunchiri/GCommunity#readme",
   "dependencies": {
+    "async-redis": "^1.1.7",
     "jsonwebtoken": "^8.5.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
