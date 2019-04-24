@@ -26,6 +26,9 @@ Thread Base Chat style Community backend
 OAuth 2.0 gwt token
 redis 
 
+### 제약
+모바일에서 thread는 < 100 개
+관심 제외, 시간순으ㄹ 내부디비 삭제 
 
 ### Model
 Board  crud
