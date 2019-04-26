@@ -1,6 +1,10 @@
 # GCommunity
 Thread Base Chat style Community backend
 
+structure
+
+channel -> thread -> mal 
+
 ### 기능
 - Thread , id, name , type( base, vs ), info
 - Realtime chat
