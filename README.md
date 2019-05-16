@@ -1,9 +1,10 @@
-# GCommunity
-Thread Base Chat style Community backend
+# Pyron
+Group Thread Base Chat style Community backend
 
 structure
 
-channel -> thread -> mal 
+server -> thread -> message
+
 
 ### 기능
 - Thread , id, name , type( base, vs ), info
